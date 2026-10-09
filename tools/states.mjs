@@ -1,0 +1,26 @@
+// Скриншоты состояний: меню, лайтбокс, сэмплер после нажатия.  node tools/states.mjs [--w 1440]
+import { chromium } from 'playwright-core'; import os from 'node:os'; import path from 'node:path';
+const arg = (n, d) => { const i = process.argv.indexOf('--' + n); return i === -1 ? d : process.argv[i + 1]; };
+const W = +arg('w', '1440'), H = W < 700 ? 844 : 900;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const ctx = await chromium.launchPersistentContext(path.join(os.tmpdir(), 'bsone-states'), { channel: 'chrome', headless: true, viewport: { width: W, height: H }, isMobile: W < 700, hasTouch: W < 700 });
+const page = ctx.pages()[0];
+await page.addInitScript(() => { try { sessionStorage.setItem('bsone-intro', '1'); } catch (e) {} });
+await page.goto('http://localhost:8331/', { waitUntil: 'load' }); await sleep(1500);
+const go = async (sel, off = 0) => { await page.evaluate(([s, o]) => { const el = document.querySelector(s); const y = el.getBoundingClientRect().top + scrollY + o; const l = window.__bs.lenis; l ? l.scrollTo(y, { immediate: true, force: true }) : scrollTo(0, y); }, [sel, off]); await sleep(1000); };
+await page.click('#burger'); await sleep(1500);
+await page.screenshot({ path: `raw/shots/st-${W}-menu.png` });
+await page.keyboard.press('Escape'); await sleep(700);
+await go('#mpc', -60);
+const pad = await page.evaluate(() => { const r = document.querySelector('.pad[data-pad="5"]').getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2]; });
+await page.mouse.click(pad[0], pad[1]); await sleep(250);
+await page.screenshot({ path: `raw/shots/st-${W}-pad-hit.png` });
+await sleep(1600);
+await page.screenshot({ path: `raw/shots/st-${W}-pad.png` });
+await go('#sheet', 200);
+const fr = await page.evaluate(() => { const r = document.querySelectorAll('.frame')[8].getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2]; });
+await page.mouse.click(fr[0], fr[1]); await sleep(180);
+await page.screenshot({ path: `raw/shots/st-${W}-lb-flip.png` });
+await sleep(1200);
+await page.screenshot({ path: `raw/shots/st-${W}-lb.png` });
+await ctx.close();

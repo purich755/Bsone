@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BSONE — школа брейкинга в Казани</title>
+<meta name="description" content="Break dance studio «ONE» — школа брейкинга в Казани на Беломорской, 6. Дети с 4 до 18 лет, больше 10 лет в деле. Воспитываем выдающихся.">
+<meta name="theme-color" content="#0A0A0B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="BSONE — школа брейкинга в Казани">
+<meta property="og:description" content="Учим держать круг — на сцене и в жизни. Дети с 4 до 18 лет, ул. Беломорская, 6.">
+<meta property="og:image" content="assets/img/hero-cypher.webp">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="1280">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/logo/favicon-180.png">
+<link rel="preload" as="image" href="assets/img/hero-cypher.webp" imagesrcset="assets/img/hero-cypher-sm.webp 720w, assets/img/hero-cypher-md.webp 900w, assets/img/hero-cypher.webp 1280w" imagesizes="(max-width: 767px) 92vw, 80vmin" fetchpriority="high">
+<link rel="stylesheet" href="css/style.css">
+<script>
+/* прелоадер — раз за сессию; preload дисплейного шрифта только по http(s): на file:// Chrome блокирует его по CORS */
+try{if(sessionStorage.getItem('bsone-intro'))document.documentElement.classList.add('intro-seen')}catch(e){}
+if(location.protocol!=='file:'){['latin','cyrillic'].forEach(function(s){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='assets/fonts/dela-gothic-one-normal-400-'+s+'.woff2';document.head.appendChild(l)})}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">К содержанию</a>
+
+<!-- Плёночное зерно поверх всей страницы -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- PRELOADER: маркерный круг рисуется от руки → вспыхивает ONE → круг становится кольцом hero -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-ring mk" viewBox="0 0 200 200"><path class="mk-a"/><path class="mk-b"/></svg>
+  <span class="preloader-word">ONE</span>
+</div>
+
+<!-- Шапка -->
+<header class="hdr" id="hdr">
+  <a class="hdr-logo" href="#cypher" aria-label="BSONE — в начало">
+    <img src="assets/logo/bsone-logo-sm.webp" srcset="assets/logo/bsone-logo-sm.webp 240w, assets/logo/bsone-logo.webp 480w" sizes="104px" width="480" height="243" alt="Break dance studio ONE">
+  </a>
+  <div class="hdr-right">
+    <a class="hdr-phone" href="tel:+79196416593">+7 (919) 641-65-93</a>
+    <a class="pill pill--red" href="https://t.me/break_dance_studio_one" target="_blank" rel="noopener">Telegram</a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Меню: пункты по окружности, медленно вращаются -->
+<nav class="menu" id="menu" aria-label="Разделы сайта" inert data-lenis-prevent>
+  <div class="menu-ring" id="menuRing">
+    <svg class="menu-circle mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg>
+    <ul class="menu-list">
+      <li><a href="#cypher"><span class="mono">R01</span>Сайфер</a></li>
+      <li><a href="#freeze"><span class="mono">R02</span>Фриз</a></li>
+      <li><a href="#manifest"><span class="mono">R03</span>Характер</a></li>
+      <li><a href="#path"><span class="mono">R04</span>Путь</a></li>
+      <li><a href="#sampler"><span class="mono">R05</span>Сэмплер</a></li>
+      <li><a href="#coach"><span class="mono">R06</span>Тренер</a></li>
+      <li><a href="#spot"><span class="mono">R07</span>Зал</a></li>
+      <li><a href="#trophies"><span class="mono">R08</span>Трофеи</a></li>
+      <li><a href="#champion"><span class="mono">R09</span>Турниры</a></li>
+      <li><a href="#camp"><span class="mono">R10</span>Лагерь</a></li>
+      <li><a href="#voices"><span class="mono">R11</span>Родители</a></li>
+      <li><a href="#exit"><span class="mono">R12</span>Контакты</a></li>
+    </ul>
+    <div class="menu-core">
+      <p class="mono">Break dance studio «ONE»</p>
+      <a class="menu-phone" href="tel:+79196416593">+7 (919) 641-65-93</a>
+      <p class="mono">ул. Беломорская, 6 · Казань</p>
+    </div>
+  </div>
+</nav>
+
+<!-- Счётчик раундов -->
+<div class="rounds" id="rounds" aria-hidden="true">
+  <svg class="rounds-ring" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16"/><circle class="rounds-fill" cx="20" cy="20" r="16" pathLength="1"/></svg>
+  <span class="rounds-text mono">ROUND <span class="rounds-roll"><span class="rounds-num">01</span></span> / 12<span class="rounds-sep"> · </span><span class="rounds-roll rounds-roll--title"><span class="rounds-title">САЙФЕР</span></span></span>
+</div>
+
+<!-- Курсор -->
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<main id="main">
+
+<!-- ROUND 01 — HERO «Сайфер» -->
+<section class="cypher" id="cypher" aria-label="Сайфер: школа брейкинга BSONE" data-round="01" data-title="Сайфер">
+  <p class="cypher-coords mono">ул. Беломорская, 6 · 55.8645° N 49.0859° E</p>
+  <div class="cypher-word" aria-hidden="true"><span class="cw"><span>O</span></span><span class="cw"><span>N</span></span><span class="cw"><span>E</span></span></div>
+  <div class="cypher-ring" id="heroRing">
+    <div class="cypher-photo duo">
+      <img id="heroImg" src="assets/img/hero-cypher.webp" srcset="assets/img/hero-cypher-sm.webp 720w, assets/img/hero-cypher-md.webp 900w, assets/img/hero-cypher.webp 1280w" sizes="(max-width: 767px) 92vw, 80vmin" width="1280" height="1280" alt="Ученик студии стоит в фризе на одной руке, вокруг — зрители баттла" fetchpriority="high" decoding="async">
+    </div>
+    <svg class="cypher-mark mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg>
+    <svg class="cypher-text" id="ringText" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><path id="ringPath" d="M100,100 m-94,0 a94,94 0 1,1 188,0 a94,94 0 1,1 -188,0"/></defs>
+      <text><textPath href="#ringPath" textLength="590" lengthAdjust="spacing">BREAK DANCE STUDIO ONE · КАЗАНЬ · ВОСПИТЫВАЕМ ВЫДАЮЩИХСЯ · С 4 ДО 18 ЛЕТ ·</textPath></text>
+    </svg>
+  </div>
+  <div class="cypher-xray" aria-hidden="true"><div class="cypher-word"><span class="cw"><span>O</span></span><span class="cw"><span>N</span></span><span class="cw"><span>E</span></span></div></div>
+  <div class="cypher-lead">
+    <h1 class="cypher-title">Школа брейкинга в&nbsp;Казани</h1>
+    <p class="cypher-sub">Учим держать круг — на&nbsp;сцене и&nbsp;в&nbsp;жизни.</p>
+  </div>
+  <div class="cypher-cta">
+    <a class="btn btn--red" href="#exit">Прийти на пробное</a>
+    <a class="btn btn--line" href="#spot">Смотреть зал</a>
+  </div>
+  <p class="cypher-scroll mono" aria-hidden="true">Скролль — выходи в круг ↓</p>
+</section>
+
+<!-- ROUND 02 — «FREEZE» -->
+<section class="freeze" id="freeze" aria-label="Фриз: дисциплина и контроль" data-round="02" data-title="Фриз">
+  <div class="freeze-stage" id="freezeStage">
+    <div class="freeze-photo">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/img/freeze-boy-sm.webp">
+        <img class="freeze-img" src="assets/img/freeze-boy.webp" srcset="assets/img/freeze-boy-md.webp 1440w, assets/img/freeze-boy.webp 2000w" sizes="100vw" width="2000" height="1334" alt="Мальчик держит силовой фриз на одной руке, вокруг сидят зрители" loading="lazy" decoding="async">
+      </picture>
+      <img class="freeze-ghost" src="assets/img/freeze-boy.webp" srcset="assets/img/freeze-boy-md.webp 1440w, assets/img/freeze-boy.webp 2000w" sizes="100vw" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="freeze-ghost" src="assets/img/freeze-boy.webp" srcset="assets/img/freeze-boy-md.webp 1440w, assets/img/freeze-boy.webp 2000w" sizes="100vw" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="freeze-ghost" src="assets/img/freeze-boy.webp" srcset="assets/img/freeze-boy-md.webp 1440w, assets/img/freeze-boy.webp 2000w" sizes="100vw" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="freeze-ghost" src="assets/img/freeze-boy.webp" srcset="assets/img/freeze-boy-md.webp 1440w, assets/img/freeze-boy.webp 2000w" sizes="100vw" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    </div>
+    <div class="freeze-shade" aria-hidden="true"></div>
+    <p class="freeze-line freeze-line--a">Он не мог усидеть на&nbsp;месте ни&nbsp;минуты.</p>
+    <div class="freeze-word" aria-hidden="true">
+      <span class="freeze-word-in">FREEZE.</span>
+      <svg class="freeze-mark mk" viewBox="0 0 200 200"><path class="mk-a"/><path class="mk-b"/></svg>
+    </div>
+    <h2 class="sr-only">Фриз</h2>
+    <p class="freeze-line freeze-line--b">Фриз — это когда ты в&nbsp;полной силе и&nbsp;полностью под контролем. <em>Этому мы и&nbsp;учим.</em></p>
+    <span class="freeze-tc mono" aria-hidden="true">REC ● <span id="freezeTc">00:00:00</span></span>
+    <div class="freeze-flash" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ROUND 03 — «Воспитываем выдающихся» -->
+<section class="manifest wrap" id="manifest" aria-label="Воспитываем выдающихся" data-round="03" data-title="Характер">
+  <p class="kicker mono"><span>R/03</span> Воспитываем выдающихся</p>
+  <div class="manifest-grid">
+    <blockquote class="manifest-quote">
+      <p class="manifest-big" id="manifestBig">Первый пункт — воспитать характер.</p>
+      <cite class="mono">— из канала тренера</cite>
+    </blockquote>
+    <div class="manifest-side">
+      <p class="lead">BSONE — это зал на Беломорской, где брейкингом живут больше десяти лет. Приходят с&nbsp;четырёх: кто-то не может минуты посидеть спокойно, кто-то боится выйти к доске. Дальше всё как в&nbsp;круге — выходишь, ошибаешься, встаёшь и&nbsp;пробуешь снова.</p>
+      <p>Здесь одна команда: старшие подсказывают младшим, на&nbsp;баттлах болеют друг за&nbsp;друга, а&nbsp;проигрыш разбирают как повод стать сильнее. Брейк для нас — не набор трюков, а&nbsp;школа характера.</p>
+    </div>
+  </div>
+  <ul class="boards">
+    <li class="board">
+      <span class="board-value" data-flip="10+" aria-hidden="true">10+</span>
+      <span class="sr-only">Больше 10</span>
+      <span class="board-label mono">лет в деле</span>
+    </li>
+    <li class="board">
+      <span class="board-value" data-flip="4–18" aria-hidden="true">4–18</span>
+      <span class="sr-only">От 4 до 18</span>
+      <span class="board-label mono">возраст учеников</span>
+    </li>
+    <li class="board">
+      <span class="board-value" data-flip="ТОП-3" aria-hidden="true">ТОП-3</span>
+      <span class="sr-only">Топ-3</span>
+      <span class="board-label mono">школ брейкинга Поволжья</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ROUND 04 — «Путь в круг» -->
+<section class="path" id="path" aria-label="Путь в круг: четыре этапа" data-round="04" data-title="Путь">
+  <div class="path-pin" id="pathPin">
+    <div class="path-track" id="pathTrack">
+      <div class="path-intro">
+        <p class="kicker mono"><span>R/04</span> Путь в круг</p>
+        <h2 class="h2 reveal-lines">Путь <br>в&nbsp;круг</h2>
+        <p class="lead">Никто не приходит и сразу не крутится на голове. Сначала шаги, потом фундамент, потом свой почерк&nbsp;— и&nbsp;только тогда выход в&nbsp;основной состав.</p>
+        <p class="path-hint mono" aria-hidden="true">листай →</p>
+      </div>
+      <article class="stage" data-stage="0">
+        <figure class="stage-photo duo duo--soft">
+          <img src="assets/img/path-01.webp" srcset="assets/img/path-01-sm.webp 560w, assets/img/path-01.webp 1000w" sizes="(max-width: 767px) 78vw, 30vw" width="1000" height="1250" alt="Малыш в первом фризе смотрит в камеру, лёжа щекой на полу" loading="lazy" decoding="async">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+        </figure>
+        <p class="stage-num mono">STAGE 01</p>
+        <h3 class="stage-title">Первые шаги</h3>
+        <p class="stage-text">Самые маленькие. Координация, ритм, игра и&nbsp;первые элементы. Здесь учат двигаться безопасно, а&nbsp;не&nbsp;гонять трюки.</p>
+      </article>
+      <article class="stage" data-stage="1">
+        <figure class="stage-photo duo duo--soft">
+          <img src="assets/img/path-02.webp" srcset="assets/img/path-02-sm.webp 560w, assets/img/path-02.webp 1000w" sizes="(max-width: 767px) 78vw, 30vw" width="1000" height="1250" alt="Мальчик держит равновесие на руках, ноги подняты над полом" loading="lazy" decoding="async">
+          <span class="tape tape--tr" aria-hidden="true"></span>
+        </figure>
+        <p class="stage-num mono">STAGE 02</p>
+        <h3 class="stage-title">Фундамент</h3>
+        <p class="stage-text">Топрок, футворк, первые фризы. Растут сила и&nbsp;выносливость&nbsp;— а&nbsp;с&nbsp;ними уверенность в&nbsp;своём теле.</p>
+      </article>
+      <article class="stage" data-stage="2">
+        <figure class="stage-photo duo duo--soft">
+          <img src="assets/img/path-03.webp" srcset="assets/img/path-03-sm.webp 560w, assets/img/path-03.webp 1000w" sizes="(max-width: 767px) 78vw, 30vw" width="1000" height="1250" alt="Ученик в футболке с номером 3 в фризе на фотосессии среди зелени" loading="lazy" decoding="async">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+        </figure>
+        <p class="stage-num mono">STAGE 03</p>
+        <h3 class="stage-title">Свой стиль</h3>
+        <p class="stage-text">Связки, музыкальность, первые баттлы. Из&nbsp;отдельных элементов складывается свой почерк.</p>
+      </article>
+      <article class="stage" data-stage="3">
+        <figure class="stage-photo duo duo--soft">
+          <img src="assets/img/path-04.webp" srcset="assets/img/path-04-sm.webp 560w, assets/img/path-04.webp 1000w" sizes="(max-width: 767px) 78vw, 30vw" width="1000" height="1250" alt="Силовой элемент на соревнованиях: танцор вращается вверх ногами перед полным залом" loading="lazy" decoding="async">
+          <span class="tape tape--tr" aria-hidden="true"></span>
+        </figure>
+        <p class="stage-num mono">STAGE 04</p>
+        <h3 class="stage-title">Основной состав</h3>
+        <p class="stage-text">Соревнования по всей России, спортивные разряды, выезды. Здесь уже выходят в&nbsp;круг за&nbsp;результатом.</p>
+      </article>
+    </div>
+    <div class="path-road" aria-hidden="true">
+      <span class="path-road-line"><span class="path-road-fill" id="roadFill"></span></span>
+      <span class="path-dot is-on"></span><span class="path-dot"></span><span class="path-dot"></span><span class="path-dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ROUND 05 — «Сэмплер» -->
+<section class="sampler wrap" id="sampler" aria-label="Сэмплер: словарь брейкинга" data-round="05" data-title="Сэмплер">
+  <div class="sampler-head">
+    <p class="kicker mono"><span>R/05</span> Словарь брейкинга</p>
+    <h2 class="h2 reveal-lines">Сэмплер</h2>
+    <p class="lead">Восемь пэдов — восемь слов, которые ребёнок принесёт домой после первой недели. Жми и&nbsp;смотри, что это.</p>
+  </div>
+  <div class="mpc" id="mpc">
+    <i class="screw screw--tl" aria-hidden="true"></i><i class="screw screw--tr" aria-hidden="true"></i>
+    <i class="screw screw--bl" aria-hidden="true"></i><i class="screw screw--br" aria-hidden="true"></i>
+    <div class="mpc-top">
+      <span class="mpc-brand mono">BSONE · MPC-01</span>
+      <span class="mpc-led" id="mpcLed" aria-hidden="true"></span>
+      <button class="mpc-sound mono" id="soundToggle" type="button" aria-pressed="false">
+        <span class="mpc-switch" aria-hidden="true"><i></i></span>
+        <span class="mpc-sound-label">Звук выкл</span>
+      </button>
+    </div>
+    <div class="mpc-body">
+      <div class="pads" id="pads" role="group" aria-label="Пэды: элементы брейкинга, клавиши 1–8">
+        <button class="pad" type="button" data-pad="0" aria-keyshortcuts="1"><span class="pad-n mono">1</span><span class="pad-name mono">TOPROCK</span></button>
+        <button class="pad" type="button" data-pad="1" aria-keyshortcuts="2"><span class="pad-n mono">2</span><span class="pad-name mono">FOOTWORK</span></button>
+        <button class="pad" type="button" data-pad="2" aria-keyshortcuts="3"><span class="pad-n mono">3</span><span class="pad-name mono">FREEZE</span></button>
+        <button class="pad" type="button" data-pad="3" aria-keyshortcuts="4"><span class="pad-n mono">4</span><span class="pad-name mono">WINDMILL</span></button>
+        <button class="pad" type="button" data-pad="4" aria-keyshortcuts="5"><span class="pad-n mono">5</span><span class="pad-name mono">FLARE</span></button>
+        <button class="pad" type="button" data-pad="5" aria-keyshortcuts="6"><span class="pad-n mono">6</span><span class="pad-name mono">HEADSPIN</span></button>
+        <button class="pad" type="button" data-pad="6" aria-keyshortcuts="7"><span class="pad-n mono">7</span><span class="pad-name mono">TWIST</span></button>
+        <button class="pad" type="button" data-pad="7" aria-keyshortcuts="8"><span class="pad-n mono">8</span><span class="pad-name mono">BATTLE</span></button>
+      </div>
+      <div class="screen">
+        <div class="screen-photo">
+          <img id="screenImg" src="assets/img/pad-toprock.webp" width="720" height="721" alt="Топрок: ученица танцует стоя в свете прожекторов" loading="lazy" decoding="async">
+        </div>
+        <div class="screen-text">
+          <p class="screen-meta mono"><span id="screenPad">PAD 01 / 08</span><span class="screen-rec">● REC</span></p>
+          <p class="screen-title" id="screenTitle">TOPROCK</p>
+          <p class="screen-desc" id="screenDesc">Танец стоя: с&nbsp;него начинается каждый выход. Шаги, ритм и&nbsp;характер&nbsp;— ещё до&nbsp;того, как руки коснулись пола.</p>
+        </div>
+        <div class="screen-scan" aria-hidden="true"></div>
+      </div>
+    </div>
+    <p class="mpc-foot mono">Клавиши 1–8 · можно нажимать подряд — получится бит</p>
+  </div>
+  <p class="sr-only" id="screenLive" aria-live="polite"></p>
+  <p class="sampler-cap">Нажми пэды по очереди — так собирается и&nbsp;танец: из&nbsp;отдельных элементов в&nbsp;свой стиль.</p>
+  <p class="sampler-toast mono" id="soundToast" role="status"></p>
+</section>
+
+<!-- ROUND 06 — Тренер -->
+<section class="coach wrap" id="coach" aria-label="Тренер Иван, Vanya One" data-round="06" data-title="Тренер">
+  <div class="coach-main">
+  <figure class="coach-photo">
+    <div class="coach-img halftone">
+      <img src="assets/img/coach-portrait.webp" width="1200" height="1600" alt="Тренер Иван (Vanya One) сидит на корточках в зале студии на фоне граффити" loading="lazy" decoding="async">
+    </div>
+    <svg class="coach-mark mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg>
+    <figcaption class="mono">HEAD COACH · VANYA ONE</figcaption>
+  </figure>
+  <div class="coach-body">
+    <p class="kicker mono"><span>R/06</span> Тренер</p>
+    <h2 class="h2 reveal-lines">Тренер, который <br>живёт этим</h2>
+    <p class="lead">Иван, в&nbsp;брейк-кругах&nbsp;— Vanya One. Родители в&nbsp;отзывах чаще всего пишут не про зал и&nbsp;не про медали, а&nbsp;про него.</p>
+    <ol class="theses">
+      <li class="thesis">
+        <h3>Находит подход к&nbsp;каждому&nbsp;— даже к&nbsp;самым непоседливым.</h3>
+        <blockquote class="tag"><p>«Тренер нашел подход к&nbsp;сыну несмотря на непростой характер.»</p><cite class="mono">Гузель Т.</cite></blockquote>
+      </li>
+      <li class="thesis">
+        <h3>Разбирает каждое выступление: где потерялся ритм, где не хватило контроля.</h3>
+        <blockquote class="tag tag--r"><p>«После соревнований и&nbsp;баттлов выходит с&nbsp;обратной связью и&nbsp;разбирает, где потерялся ритм, где не хватило контроля.»</p><cite class="mono">Алсу Б.</cite></blockquote>
+      </li>
+      <li class="thesis">
+        <h3>Тренировка часто идёт дольше положенного&nbsp;— потому что не&nbsp;по&nbsp;звонку.</h3>
+        <blockquote class="tag"><p>«Тренировки зачастую задерживаются на пол часа минимум!»</p><cite class="mono">Диана К.</cite></blockquote>
+      </li>
+    </ol>
+  </div>
+  </div>
+  <blockquote class="coach-voice">
+    <p>«Наша культура пронизана соревновательным духом&nbsp;— побеждает тот, у&nbsp;кого есть потребность доказывать, что он круче&nbsp;— <mark>стержень</mark>.»</p>
+    <cite class="mono">Vanya One · из Telegram-канала</cite>
+  </blockquote>
+</section>
+
+<!-- ROUND 07 — BSONE SPOT -->
+<section class="spot wrap" id="spot" aria-label="BSONE SPOT: зал и фото" data-round="07" data-title="Зал">
+  <div class="spot-head">
+    <p class="kicker mono"><span>R/07</span> Зал, тренировки, турниры</p>
+    <h2 class="h2 reveal-lines">BSONE SPOT</h2>
+    <p class="lead">Контактный лист: зал на Беломорской, тренировки, баттлы и&nbsp;фотосессии учеников. Красным обведено то, что мы бы повесили на стену.</p>
+  </div>
+  <div class="sheet" id="sheet">
+<!--@SPOT-->
+    <div class="strip">
+      <button class="frame" type="button" data-full="assets/img/spot-01.webp" data-w="1800" data-h="832" data-cursor="view" aria-label="Открыть кадр 07A: Зал BSONE: светлый пол, граффити на стенах"><span class="frame-img duo duo--soft"><img src="assets/img/spot-01-t.webp" width="600" height="400" alt="Зал BSONE: светлый пол, граффити на стенах" loading="lazy" decoding="async"></span><span class="frame-n mono">07A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-02.webp" data-w="1800" data-h="832" data-cursor="view" aria-label="Открыть кадр 08A: Стена зала с логотипом ONE и нарисованными брейкерами"><span class="frame-img duo duo--soft"><img src="assets/img/spot-02-t.webp" width="600" height="400" alt="Стена зала с логотипом ONE и нарисованными брейкерами" loading="lazy" decoding="async"></span><span class="frame-n mono">08A</span></button>
+      <button class="frame frame--best" type="button" data-full="assets/img/spot-03.webp" data-w="1440" data-h="1800" data-cursor="view" aria-label="Открыть кадр 09A: Ученик в фризе на фоне баннеров ONE"><span class="frame-img duo duo--soft"><img src="assets/img/spot-03-t.webp" width="600" height="400" alt="Ученик в фризе на фоне баннеров ONE" loading="lazy" decoding="async"></span><span class="frame-n mono">09A</span><svg class="frame-mark mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg></button>
+      <button class="frame" type="button" data-full="assets/img/spot-04.webp" data-w="1255" data-h="1800" data-cursor="view" aria-label="Открыть кадр 10A: Выступление на улице у моста «Миллениум»"><span class="frame-img duo duo--soft"><img src="assets/img/spot-04-t.webp" width="600" height="400" alt="Выступление на улице у моста «Миллениум»" loading="lazy" decoding="async"></span><span class="frame-n mono">10A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-05.webp" data-w="1800" data-h="1192" data-cursor="view" aria-label="Открыть кадр 11A: Уголок диджея: колонки и стена граффити"><span class="frame-img duo duo--soft"><img src="assets/img/spot-05-t.webp" width="600" height="400" alt="Уголок диджея: колонки и стена граффити" loading="lazy" decoding="async"></span><span class="frame-n mono">11A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-06.webp" data-w="1350" data-h="1800" data-cursor="view" aria-label="Открыть кадр 12A: Ученик держит фриз на одной руке перед логотипом студии"><span class="frame-img duo duo--soft"><img src="assets/img/spot-06-t.webp" width="600" height="400" alt="Ученик держит фриз на одной руке перед логотипом студии" loading="lazy" decoding="async"></span><span class="frame-n mono">12A</span></button>
+    </div>
+    <div class="strip">
+      <button class="frame" type="button" data-full="assets/img/spot-07.webp" data-w="1800" data-h="1200" data-cursor="view" aria-label="Открыть кадр 13A: Баттл в плотном кругу зрителей"><span class="frame-img duo duo--soft"><img src="assets/img/spot-07-t.webp" width="600" height="400" alt="Баттл в плотном кругу зрителей" loading="lazy" decoding="async"></span><span class="frame-n mono">13A</span></button>
+      <button class="frame frame--best" type="button" data-full="assets/img/spot-08.webp" data-w="800" data-h="533" data-cursor="view" aria-label="Открыть кадр 14A: Тренировка в шатре лагеря BSONE CAMP"><span class="frame-img duo duo--soft"><img src="assets/img/spot-08-t.webp" width="600" height="400" alt="Тренировка в шатре лагеря BSONE CAMP" loading="lazy" decoding="async"></span><span class="frame-n mono">14A</span><svg class="frame-mark mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg></button>
+      <button class="frame" type="button" data-full="assets/img/spot-09.webp" data-w="1440" data-h="1800" data-cursor="view" aria-label="Открыть кадр 15A: Ученица в фризе на фотосессии среди зелени"><span class="frame-img duo duo--soft"><img src="assets/img/spot-09-t.webp" width="600" height="400" alt="Ученица в фризе на фотосессии среди зелени" loading="lazy" decoding="async"></span><span class="frame-n mono">15A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-10.webp" data-w="1800" data-h="832" data-cursor="view" aria-label="Открыть кадр 16A: Зал студии целиком: граффити и логотип ONE"><span class="frame-img duo duo--soft"><img src="assets/img/spot-10-t.webp" width="600" height="400" alt="Зал студии целиком: граффити и логотип ONE" loading="lazy" decoding="async"></span><span class="frame-n mono">16A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-11.webp" data-w="1079" data-h="864" data-cursor="view" aria-label="Открыть кадр 17A: Ученица в белом на фотосессии в саду"><span class="frame-img duo duo--soft"><img src="assets/img/spot-11-t.webp" width="600" height="400" alt="Ученица в белом на фотосессии в саду" loading="lazy" decoding="async"></span><span class="frame-n mono">17A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-12.webp" data-w="959" data-h="640" data-cursor="view" aria-label="Открыть кадр 18A: Командный номер на сцене"><span class="frame-img duo duo--soft"><img src="assets/img/spot-12-t.webp" width="600" height="400" alt="Командный номер на сцене" loading="lazy" decoding="async"></span><span class="frame-n mono">18A</span></button>
+    </div>
+    <div class="strip">
+      <button class="frame" type="button" data-full="assets/img/spot-13.webp" data-w="1350" data-h="1800" data-cursor="view" aria-label="Открыть кадр 19A: Фриз на тренировке, ребята сидят вокруг"><span class="frame-img duo duo--soft"><img src="assets/img/spot-13-t.webp" width="600" height="400" alt="Фриз на тренировке, ребята сидят вокруг" loading="lazy" decoding="async"></span><span class="frame-n mono">19A</span></button>
+      <button class="frame frame--best" type="button" data-full="assets/img/spot-14.webp" data-w="1800" data-h="1438" data-cursor="view" aria-label="Открыть кадр 20A: Чёрно-белый кадр: ученик в силовом фризе"><span class="frame-img duo duo--soft"><img src="assets/img/spot-14-t.webp" width="600" height="400" alt="Чёрно-белый кадр: ученик в силовом фризе" loading="lazy" decoding="async"></span><span class="frame-n mono">20A</span><svg class="frame-mark mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg></button>
+      <button class="frame" type="button" data-full="assets/img/spot-15.webp" data-w="1233" data-h="1800" data-cursor="view" aria-label="Открыть кадр 21A: Танцор у моста «Миллениум» на уличном фестивале"><span class="frame-img duo duo--soft"><img src="assets/img/spot-15-t.webp" width="600" height="400" alt="Танцор у моста «Миллениум» на уличном фестивале" loading="lazy" decoding="async"></span><span class="frame-n mono">21A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-16.webp" data-w="1080" data-h="721" data-cursor="view" aria-label="Открыть кадр 22A: Силовой элемент на соревнованиях"><span class="frame-img duo duo--soft"><img src="assets/img/spot-16-t.webp" width="600" height="400" alt="Силовой элемент на соревнованиях" loading="lazy" decoding="async"></span><span class="frame-n mono">22A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-17.webp" data-w="600" data-h="800" data-cursor="view" aria-label="Открыть кадр 23A: Тренировка в лагере: стойка на руках"><span class="frame-img duo duo--soft"><img src="assets/img/spot-17-t.webp" width="600" height="400" alt="Тренировка в лагере: стойка на руках" loading="lazy" decoding="async"></span><span class="frame-n mono">23A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-18.webp" data-w="1800" data-h="1440" data-cursor="view" aria-label="Открыть кадр 24A: Фриз на домашней фотосессии"><span class="frame-img duo duo--soft"><img src="assets/img/spot-18-t.webp" width="600" height="400" alt="Фриз на домашней фотосессии" loading="lazy" decoding="async"></span><span class="frame-n mono">24A</span></button>
+    </div>
+    <div class="strip">
+      <button class="frame" type="button" data-full="assets/img/spot-19.webp" data-w="1600" data-h="1200" data-cursor="view" aria-label="Открыть кадр 25A: Команда студии на пешеходной улице"><span class="frame-img duo duo--soft"><img src="assets/img/spot-19-t.webp" width="600" height="400" alt="Команда студии на пешеходной улице" loading="lazy" decoding="async"></span><span class="frame-n mono">25A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-20.webp" data-w="1080" data-h="721" data-cursor="view" aria-label="Открыть кадр 26A: Танцор в прыжке на тёмной сцене"><span class="frame-img duo duo--soft"><img src="assets/img/spot-20-t.webp" width="600" height="400" alt="Танцор в прыжке на тёмной сцене" loading="lazy" decoding="async"></span><span class="frame-n mono">26A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-21.webp" data-w="853" data-h="1280" data-cursor="view" aria-label="Открыть кадр 27A: Стойка на руке у логотипа ONE"><span class="frame-img duo duo--soft"><img src="assets/img/spot-21-t.webp" width="600" height="400" alt="Стойка на руке у логотипа ONE" loading="lazy" decoding="async"></span><span class="frame-n mono">27A</span></button>
+      <button class="frame frame--best" type="button" data-full="assets/img/spot-22.webp" data-w="1800" data-h="1200" data-cursor="view" aria-label="Открыть кадр 28A: Силовой элемент в зале с зелёной подсветкой"><span class="frame-img duo duo--soft"><img src="assets/img/spot-22-t.webp" width="600" height="400" alt="Силовой элемент в зале с зелёной подсветкой" loading="lazy" decoding="async"></span><span class="frame-n mono">28A</span><svg class="frame-mark mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg></button>
+      <button class="frame" type="button" data-full="assets/img/spot-23.webp" data-w="1800" data-h="1200" data-cursor="view" aria-label="Открыть кадр 29A: Вращение над сценой в свете прожекторов"><span class="frame-img duo duo--soft"><img src="assets/img/spot-23-t.webp" width="600" height="400" alt="Вращение над сценой в свете прожекторов" loading="lazy" decoding="async"></span><span class="frame-n mono">29A</span></button>
+      <button class="frame" type="button" data-full="assets/img/spot-24.webp" data-w="533" data-h="800" data-cursor="view" aria-label="Открыть кадр 30A: Футворк на ковре лагеря BSONE CAMP"><span class="frame-img duo duo--soft"><img src="assets/img/spot-24-t.webp" width="533" height="400" alt="Футворк на ковре лагеря BSONE CAMP" loading="lazy" decoding="async"></span><span class="frame-n mono">30A</span></button>
+    </div>
+<!--/@SPOT-->
+  </div>
+  <p class="spot-note mono">Кадр — чтобы открыть · ← → листать · Esc — закрыть</p>
+</section>
+
+<!-- ROUND 08 — Трофейная стена -->
+<section class="trophies" id="trophies" aria-label="Трофейная стена: достижения учеников" data-round="08" data-title="Трофеи">
+  <div class="wrap trophies-head">
+    <p class="kicker mono"><span>R/08</span> Трофейная стена</p>
+    <h2 class="h2 reveal-lines">Не медали <br>в&nbsp;шкафу</h2>
+    <p class="lead">То, что ученики BSONE привозят с&nbsp;соревнований и&nbsp;сцен. Стена живая&nbsp;— стикеры можно двигать.</p>
+  </div>
+  <div class="wall" id="wall">
+    <p class="wall-hint mono" aria-hidden="true">↖ перетащи</p>
+    <ul class="stickers" id="stickers">
+      <li class="sticker sticker--circle sticker--red" style="--x:5%;--y:8%;--r:-8deg"><span class="st-top mono">чемпион</span><b>Татарстана</b><span class="st-sub mono">7–9 лет</span></li>
+      <li class="sticker sticker--star" style="--x:27%;--y:2%;--r:7deg"><span class="st-top mono">победы</span><b>на всерос&shy;сийских</b><span class="st-sub mono">соревнованиях</span></li>
+      <li class="sticker sticker--rect sticker--chalk" style="--x:52%;--y:9%;--r:-3deg"><span class="st-top mono">благодарности</span><b>министра спорта РТ</b></li>
+      <li class="sticker sticker--logo" style="--x:82%;--y:4%;--r:11deg"><img src="assets/logo/bsone-logo.webp" width="480" height="243" alt="" loading="lazy" decoding="async"><span class="sr-only">Наклейка BSONE</span></li>
+      <li class="sticker sticker--tag" style="--x:73%;--y:43%;--r:5deg"><b>Высокие спортивные разряды</b></li>
+      <li class="sticker sticker--rect sticker--outline" style="--x:9%;--y:56%;--r:4deg"><span class="st-top mono">участие</span><b>«Танцы» на ТНТ</b></li>
+      <li class="sticker sticker--circle sticker--gold" style="--x:38%;--y:46%;--r:-6deg"><span class="st-top mono">финал</span><b>Power Move</b><span class="st-sub mono">БРЕЙК СОЮЗ 2026</span></li>
+      <li class="sticker sticker--tape" style="--x:58%;--y:74%;--r:-2deg"><b>Выезды на соревнования по всей стране</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ROUND 09 — YOU CHAMPION -->
+<section class="champion" id="champion" aria-label="YOU CHAMPION и TRUE FOR YOU: свои турниры" data-round="09" data-title="Турниры">
+  <div class="wrap champion-grid">
+    <div class="champion-text">
+      <p class="kicker mono"><span>R/09</span> Свои турниры</p>
+      <h2 class="h2 reveal-lines">YOU <br>CHAMPION</h2>
+      <p class="lead">Дважды в&nbsp;год&nbsp;— летом и&nbsp;зимой&nbsp;— студия проводит свои турниры: <b>YOU CHAMPION</b> и&nbsp;<b>TRUE FOR YOU</b>.</p>
+      <p>Это не экзамен, а&nbsp;праздник для своих: дети выходят в&nbsp;круг перед зрителями, получают подарки и&nbsp;видят, как выросли за&nbsp;полгода. Для многих это первый настоящий выход.</p>
+    </div>
+    <figure class="bracket" id="bracket">
+      <svg viewBox="0 0 760 460" role="img" aria-label="Турнирная сетка: восемь участников, четверть, полуфинал, финал. В финале — ты">
+        <g class="br-lines" fill="none">
+          <path pathLength="1" d="M150 30 H185 V80 H150 M185 55 H230"/>
+          <path pathLength="1" d="M150 140 H185 V190 H150 M185 165 H230"/>
+          <path pathLength="1" d="M150 270 H185 V320 H150 M185 295 H230"/>
+          <path pathLength="1" d="M150 380 H185 V430 H150 M185 405 H230"/>
+          <path pathLength="1" d="M380 55 H415 V165 H380 M415 110 H460"/>
+          <path pathLength="1" d="M380 295 H415 V405 H380 M415 350 H460"/>
+          <path pathLength="1" d="M610 110 H640 V350 H610 M640 230 H660"/>
+        </g>
+        <g class="br-slots">
+          <g class="br-slot"><rect x="0" y="14" width="150" height="32" rx="4"/><text x="14" y="35">01 · ВЫХОД</text></g>
+          <g class="br-slot"><rect x="0" y="64" width="150" height="32" rx="4"/><text x="14" y="85">02 · ВЫХОД</text></g>
+          <g class="br-slot"><rect x="0" y="124" width="150" height="32" rx="4"/><text x="14" y="145">03 · ВЫХОД</text></g>
+          <g class="br-slot"><rect x="0" y="174" width="150" height="32" rx="4"/><text x="14" y="195">04 · ВЫХОД</text></g>
+          <g class="br-slot"><rect x="0" y="254" width="150" height="32" rx="4"/><text x="14" y="275">05 · ВЫХОД</text></g>
+          <g class="br-slot"><rect x="0" y="304" width="150" height="32" rx="4"/><text x="14" y="325">06 · ВЫХОД</text></g>
+          <g class="br-slot"><rect x="0" y="364" width="150" height="32" rx="4"/><text x="14" y="385">07 · ВЫХОД</text></g>
+          <g class="br-slot"><rect x="0" y="414" width="150" height="32" rx="4"/><text x="14" y="435">08 · ВЫХОД</text></g>
+          <g class="br-slot br-slot--2"><rect x="230" y="39" width="150" height="32" rx="4"/><text x="244" y="60">1/4 · ПОБЕДА</text></g>
+          <g class="br-slot br-slot--2"><rect x="230" y="149" width="150" height="32" rx="4"/><text x="244" y="170">1/4 · ПОБЕДА</text></g>
+          <g class="br-slot br-slot--2"><rect x="230" y="279" width="150" height="32" rx="4"/><text x="244" y="300">1/4 · ПОБЕДА</text></g>
+          <g class="br-slot br-slot--2"><rect x="230" y="389" width="150" height="32" rx="4"/><text x="244" y="410">1/4 · ПОБЕДА</text></g>
+          <g class="br-slot br-slot--3"><rect x="460" y="94" width="150" height="32" rx="4"/><text x="474" y="115">1/2 · ПОБЕДА</text></g>
+          <g class="br-slot br-slot--3"><rect x="460" y="334" width="150" height="32" rx="4"/><text x="474" y="355">1/2 · ПОБЕДА</text></g>
+          <g class="br-final"><rect x="660" y="196" width="100" height="68" rx="6"/><text class="br-you" x="710" y="243" text-anchor="middle">ТЫ</text><text class="br-final-l" x="710" y="186" text-anchor="middle">ФИНАЛ</text></g>
+        </g>
+      </svg>
+    </figure>
+  </div>
+  <div class="reel" aria-label="Фото с турниров студии">
+    <div class="reel-track">
+      <figure class="reel-item duo duo--soft"><img src="assets/img/tour-01.webp" width="900" height="600" alt="Награждение на турнире: ученики с дипломами CHAMPION" loading="lazy" decoding="async"><figcaption class="mono">YC · 01</figcaption></figure>
+      <figure class="reel-item duo duo--soft"><img src="assets/img/tour-02.webp" width="900" height="600" alt="Баттл в кругу: танцор на полу, зрители сидят вокруг" loading="lazy" decoding="async"><figcaption class="mono">YC · 02</figcaption></figure>
+      <figure class="reel-item duo duo--soft"><img src="assets/img/tour-03.webp" width="900" height="600" alt="Силовой элемент на турнире в полутёмном зале" loading="lazy" decoding="async"><figcaption class="mono">YC · 03</figcaption></figure>
+      <figure class="reel-item duo duo--soft"><img src="assets/img/tour-04.webp" width="900" height="600" alt="Выход в круг на фоне баннера студии ONE" loading="lazy" decoding="async"><figcaption class="mono">YC · 04</figcaption></figure>
+      <figure class="reel-item duo duo--soft"><img src="assets/img/tour-05.webp" width="900" height="600" alt="Ученик в фризе на ковре с логотипом турнира" loading="lazy" decoding="async"><figcaption class="mono">YC · 05</figcaption></figure>
+      <figure class="reel-item duo duo--soft"><img src="assets/img/tour-06.webp" width="900" height="600" alt="Победители турнира с дипломами и подарками" loading="lazy" decoding="async"><figcaption class="mono">YC · 06</figcaption></figure>
+      <figure class="reel-item duo duo--soft" aria-hidden="true"><img src="assets/img/tour-01.webp" width="900" height="600" alt="" loading="lazy" decoding="async"><figcaption class="mono">YC · 01</figcaption></figure>
+      <figure class="reel-item duo duo--soft" aria-hidden="true"><img src="assets/img/tour-02.webp" width="900" height="600" alt="" loading="lazy" decoding="async"><figcaption class="mono">YC · 02</figcaption></figure>
+      <figure class="reel-item duo duo--soft" aria-hidden="true"><img src="assets/img/tour-03.webp" width="900" height="600" alt="" loading="lazy" decoding="async"><figcaption class="mono">YC · 03</figcaption></figure>
+      <figure class="reel-item duo duo--soft" aria-hidden="true"><img src="assets/img/tour-04.webp" width="900" height="600" alt="" loading="lazy" decoding="async"><figcaption class="mono">YC · 04</figcaption></figure>
+      <figure class="reel-item duo duo--soft" aria-hidden="true"><img src="assets/img/tour-05.webp" width="900" height="600" alt="" loading="lazy" decoding="async"><figcaption class="mono">YC · 05</figcaption></figure>
+      <figure class="reel-item duo duo--soft" aria-hidden="true"><img src="assets/img/tour-06.webp" width="900" height="600" alt="" loading="lazy" decoding="async"><figcaption class="mono">YC · 06</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ROUND 10 — BSONE CAMP -->
+<section class="camp" id="camp" aria-label="BSONE CAMP: летние сборы" data-round="10" data-title="Лагерь">
+  <div class="camp-stage" id="campStage">
+    <div class="camp-bg duo duo--soft">
+      <img src="assets/img/camp-splash.webp" width="1600" height="1066" alt="Лагерь BSONE CAMP: мальчик стоит на руках у бассейна, вокруг летят брызги, за ним шатры и сосны" loading="lazy" decoding="async">
+    </div>
+    <div class="camp-word" aria-hidden="true">
+      <span class="camp-word-line">CAMP</span>
+      <span class="camp-word-fill" id="campFill">CAMP</span>
+    </div>
+    <h2 class="sr-only">BSONE CAMP</h2>
+    <p class="camp-kicker mono"><span>R/10</span> BSONE CAMP</p>
+    <div class="luggage" id="luggage">
+      <span class="tape tape--top" aria-hidden="true"></span>
+      <span class="luggage-hole" aria-hidden="true"></span>
+      <p class="mono luggage-head">BSONE CAMP · KZN</p>
+      <p class="luggage-text">Каждое лето · около 10&nbsp;дней · тренировки, воздух, команда</p>
+    </div>
+  </div>
+  <div class="wrap camp-after">
+    <p class="lead camp-lead">Лагерь&nbsp;— любимое детище студии. Тренировки с&nbsp;утра до&nbsp;вечера, баттлы, мастер-классы приглашённых брейкеров&nbsp;— и&nbsp;всё это на&nbsp;свежем воздухе, всей командой. <b>Дети ждут его весь год</b>&nbsp;— родители пишут об&nbsp;этом чуть ли не в&nbsp;каждом отзыве.</p>
+    <div class="camp-snaps">
+      <figure class="snap snap--1"><img src="assets/img/camp-lake.webp" width="800" height="600" alt="Участники лагеря выстроились на песчаном берегу лесного озера" loading="lazy" decoding="async"><figcaption class="mono">10A · ОЗЕРО</figcaption><span class="tape tape--tl" aria-hidden="true"></span></figure>
+      <figure class="snap snap--2"><img src="assets/img/camp-splash-v.webp" width="600" height="800" alt="Мальчик в стойке на голове у бассейна, брызги во все стороны" loading="lazy" decoding="async"><figcaption class="mono">11A · БАССЕЙН</figcaption><span class="tape tape--tr" aria-hidden="true"></span></figure>
+      <figure class="snap snap--3"><img src="assets/img/camp-team.webp" width="800" height="600" alt="Большая команда лагеря позирует под навесом среди сосен" loading="lazy" decoding="async"><figcaption class="mono">12A · КОМАНДА</figcaption><span class="tape tape--tl" aria-hidden="true"></span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ROUND 11 — Голоса родителей -->
+<section class="voices" id="voices" aria-label="Голоса родителей: отзывы" data-round="11" data-title="Родители">
+  <div class="wrap voices-grid">
+    <div class="voices-head">
+      <p class="kicker mono"><span>R/11</span> Голоса родителей</p>
+      <h2 class="h2 reveal-lines">«Это <br>семья»</h2>
+      <p class="lead">Короткие цитаты из&nbsp;отзывов родителей на&nbsp;Яндекс Картах&nbsp;— как есть, без правок.</p>
+    </div>
+    <div class="voices-cols" data-lenis-prevent-wheel="false">
+      <ul class="voices-col voices-col--up">
+        <li class="note"><p>«…важно было найти место, где не только «гоняют трюки», но и&nbsp;действительно учат ребёнка двигаться безопасно…»</p><cite class="mono">Елена А.</cite></li>
+        <li class="note"><p>«Брейк для нас&nbsp;— это не только танец, но и&nbsp;школа характера.»</p><cite class="mono">Алсу Б.</cite></li>
+        <li class="note"><p>«Старшие ребята подсказывают младшим, на&nbsp;баттлах все поддерживают друг друга, нет токсичности и&nbsp;«звёздности».»</p><cite class="mono">Елена А.</cite></li>
+        <li class="note"><p>«Профессионально выстроеные уроки, результат мы уже увидели через 3&nbsp;месяца!»</p><cite class="mono">Ольга Т.</cite></li>
+      </ul>
+      <ul class="voices-col voices-col--down">
+        <li class="note"><p>«Это не просто студия танца-это семья, и&nbsp;для детей и&nbsp;для родителей.»</p><cite class="mono">Vera</cite></li>
+        <li class="note"><p>«Летом ездят в&nbsp;лагерь на&nbsp;10дней, этого события дети ждут весь год.»</p><cite class="mono">Айгуль З.</cite></li>
+        <li class="note"><p>«…благодаря тренировкам и&nbsp;нашему тренеру Ивану ребёнок стал дисциплинированным и&nbsp;усидчивым.»</p><cite class="mono">Алсу Б.</cite></li>
+        <li class="note"><p>«…к маленьким детишкам относятся с&nbsp;уважением, помогают и&nbsp;всегда поддерживают друг друга.»</p><cite class="mono">Алия М.</cite></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ROUND 12 — «Твой выход» -->
+<section class="exit" id="exit" aria-label="Твой выход: как попасть и контакты" data-round="12" data-title="Твой выход">
+  <div class="wrap">
+    <p class="kicker mono"><span>R/12</span> Как попасть в круг</p>
+    <h2 class="h2 exit-title reveal-lines">Твой выход</h2>
+    <div class="steps">
+      <svg class="steps-arc" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path id="stepsArc" pathLength="1" d="M60 100 C 240 -10, 420 -10, 500 60 S 760 130, 940 20"/></svg>
+      <ol class="steps-list">
+        <li class="step"><span class="step-n">01</span><h3>Позвонить или написать Ивану</h3><p>Расскажите, сколько ребёнку лет и&nbsp;занимался ли он раньше&nbsp;— тренер подскажет группу и&nbsp;время.</p></li>
+        <li class="step"><span class="step-n">02</span><h3>Прийти на&nbsp;пробное</h3><p>Удобная одежда и&nbsp;вода&nbsp;— остальное покажут в&nbsp;зале. Можно просто посмотреть, как всё устроено.</p></li>
+        <li class="step"><span class="step-n">03</span><h3>Первый выход в&nbsp;круг</h3><p>Сначала&nbsp;— попробовать. Круг подождёт, пока ты будешь готов.</p></li>
+      </ol>
+    </div>
+    <div class="address">
+      <p class="address-city mono">Казань · круг замыкается здесь</p>
+      <p class="address-big"><span class="address-line">ул. Беломорская, <span class="nw">6</span></span>
+        <svg class="address-mark mk" viewBox="0 0 200 200" aria-hidden="true"><path class="mk-a"/><path class="mk-b"/></svg>
+      </p>
+      <p class="address-sub">Остановка «Стадион Мотор»&nbsp;— пара минут пешком, от&nbsp;метро «Авиастроительная» около километра.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="map" id="map">
+        <img class="map-img" src="assets/img/map-dark.webp" width="1600" height="1100" alt="Схема района: студия на Беломорской улице, рядом стадион «Мотор»" loading="lazy" decoding="async">
+        <span class="map-pin" aria-hidden="true"><i></i></span>
+        <span class="map-label mono" aria-hidden="true">BSONE · Беломорская, 6</span>
+        <a class="btn btn--line btn--sm map-btn" href="https://yandex.ru/maps/org/breyk_dans_studiya_one/60021611947/" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+        <span class="map-copy mono">© OpenStreetMap</span>
+      </div>
+      <div class="contact">
+        <a class="contact-phone" href="tel:+79196416593">+7 (919) 641-65-93</a>
+        <p class="contact-who mono">Иван · head coach · звонки и сообщения</p>
+        <div class="contact-btns">
+          <a class="btn btn--red" href="https://t.me/break_dance_studio_one" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--line" href="https://vk.ru/break_dance_studio_one" target="_blank" rel="noopener">ВКонтакте</a>
+          <a class="btn btn--line" href="https://www.youtube.com/channel/UC7KWmma_wo1qxULomeqkbzQ" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <p class="contact-time">Тренировки по&nbsp;вечерам. Точное расписание групп&nbsp;— у&nbsp;тренера.</p>
+        <figure class="contact-door">
+          <img src="assets/img/entrance.webp" width="900" height="1000" alt="Вход в студию: тёмная дверь с наклейкой ONE в светлой стене" loading="lazy" decoding="async">
+          <figcaption class="mono">Вход · ищите наклейку ONE</figcaption>
+          <span class="tape tape--tr" aria-hidden="true"></span>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="more">
+    <p class="more-label mono">Ещё мы</p>
+    <ul class="more-list">
+      <li>аренда зала</li><li>постановка номеров</li><li>выступления на мероприятиях</li><li>персональные тренировки</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-row wrap">
+    <p class="mono">© BSONE · Казань</p>
+    <ul class="ftr-links mono">
+      <li><a href="https://t.me/break_dance_studio_one" target="_blank" rel="noopener">Telegram</a></li>
+      <li><a href="https://vk.ru/break_dance_studio_one" target="_blank" rel="noopener">ВКонтакте</a></li>
+      <li><a href="https://www.youtube.com/channel/UC7KWmma_wo1qxULomeqkbzQ" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+    <p class="mono">демо-версия сайта</p>
+  </div>
+  <p class="ftr-word" aria-hidden="true"><span data-l="O">O</span><span data-l="N">N</span><span data-l="E">E</span></p>
+</footer>
+
+<!-- Лайтбокс -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden data-lenis-prevent>
+  <div class="lb-bg"></div>
+  <div class="lb-stage" id="lbStage"><img class="lb-img" id="lbImg" alt=""></div>
+  <p class="lb-count mono" id="lbCount">01 / 24</p>
+  <p class="lb-cap mono" id="lbCap"></p>
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Закрыть">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Предыдущий кадр">←</button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Следующий кадр">→</button>
+  <div class="lb-strip" id="lbStrip"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/sampler.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/stickers.js" defer></script>
+</body>
+</html>
